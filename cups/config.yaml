@@ -1,0 +1,39 @@
+name: CUPS Print Server for Android
+slug: cups
+version: "0.1.0"
+description: >-
+  Share network printers with Android devices using CUPS and Mopria/IPP Everywhere.
+url: https://github.com/homeassistant-addon-cups
+arch:
+  - aarch64
+  - armv7
+  - armhf
+  - amd64
+startup: services
+boot: auto
+init: false
+webui: http://[HOST]:[PORT:631]
+ports:
+  "631/tcp": 631
+ports_description:
+  "631/tcp": IPP printing and web administration
+host_network: false
+ingress: false
+ingress_entry: /
+panel_icon: mdi:printer
+discovery:
+  - cups
+map:
+  - config:rw
+options:
+  log_level: info
+  admin_user: cupsadmin
+  admin_password: changeme
+  printers: []
+schema:
+  log_level: list(debug|info|notice|warning|error)
+  admin_user: str?
+  admin_password: password?
+  printers:
+    - str
+image: null
