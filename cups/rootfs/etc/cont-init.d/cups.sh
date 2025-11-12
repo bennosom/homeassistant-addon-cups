@@ -17,6 +17,11 @@ for path in /etc/cups /var/log/cups /run/cups /var/spool/cups; do
     chmod 755 "${path}"
 done
 
+# Ensure certificates directory exists with restricted permissions
+mkdir -p /etc/cups/certs
+chown root:lp /etc/cups/certs
+chmod 710 /etc/cups/certs
+
 # Prepare admin user
 ADMIN_USER=$(bashio::config 'admin_user')
 ADMIN_PASSWORD=$(bashio::config 'admin_password')
