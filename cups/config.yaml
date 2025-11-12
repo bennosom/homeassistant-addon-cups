@@ -3,7 +3,7 @@ slug: cups
 version: "0.1.0"
 description: >-
   Share network printers with Android devices using CUPS and Mopria/IPP Everywhere.
-url: https://github.com/homeassistant-addon-cups
+url: https://github.com/bennosom/homeassistant-addon-cups
 arch:
   - aarch64
   - armv7
