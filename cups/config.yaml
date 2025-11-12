@@ -27,7 +27,7 @@ map:
   - config:rw
 options:
   log_level: info
-  admin_user: cupsadmin
+  admin_user: admin
   admin_password: changeme
   printers: []
 schema:
@@ -36,4 +36,3 @@ schema:
   admin_password: password?
   printers:
     - str
-image: null
