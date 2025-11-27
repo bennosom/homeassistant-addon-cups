@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
+set -euo pipefail
+
+DATA_PATH=$(bashio::addon.data.path)
+
+bashio::log.info "Ensuring add-on data directory exists at ${DATA_PATH}"
+mkdir -p "${DATA_PATH}"

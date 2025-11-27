@@ -1,6 +1,6 @@
 name: CUPS Print Server for Android
 slug: cups
-version: "0.1.0"
+version: "0.1.1"
 description: >-
   Share network printers with Android devices using CUPS and Mopria/IPP Everywhere.
 url: https://github.com/bennosom/homeassistant-addon-cups
